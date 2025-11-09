@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitchen Designs - Sree Varahi Dream & Build</title>
+  <link rel="icon" type="image/x-icon" href="icon.ico" />
+  <link rel="stylesheet" href="stylepj.css" />
+  <style>
+    body {
+      background: url("imgs/floorbg.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ---------- Navigation ---------- -->
+  <nav>
+    <img src="imgs/colourlogo.png" class="logo" alt="Sree Varahi Dream & Build Logo" />
+    <ul>
+       <li><a href="kitchen.html">Kitchen</a></li>
+      <li><a href="bedroom.html">Bedroom</a></li>
+      <li><a href="hall.html">Hall</a></li>
+      <li><a href="artworks.html">Artworks</a></li>
+      <li><a href="flooring.html">Flooring</a></li>
+      <li><a href="aluminum.html">Aluminum</a></li>
+      <li><a href="elevations.html">Elevations</a></li>
+      <li><a href="painting.html">Painting</a></li>
+      <li><a href="steelframe.html">Steel Art</a></li>
+      <li><a href="false-ceiling.html">False Ceiling</a></li></ul>
+  </nav>
+
+  <!-- ---------- Hero Section ---------- -->
+  <section class="hero">
+    <h1>Flooring Designs</h1>
+    <p>Beauty beneath every step.</p>
+  </section>
+
+  <!-- ---------- Horizontal Gallery ---------- -->
+  <div class="gallery-container">
+    <div class="gallery">
+      <img src="imgs/fl1.jpg" alt="Kitchen Project 1">
+      <img src="imgs/fl2.jpg" alt="Kitchen Project 2">
+      <img src="imgs/fl3.jpg" alt="Kitchen Project 3">
+      <img src="imgs/fl4.jpg" alt="Kitchen Project 4">
+      <img src="imgs/fl5.jpg" alt="Kitchen Project 5">
+      <img src="imgs/fl6.jpg" alt="Kitchen Project 6">
+      <img src="imgs/fl7.jpg" alt="Kitchen Project 7">
+      <img src="imgs/fl8.jpg" alt="Kitchen Project 8">
+    </div>
+  </div>
+
+  <!-- ---------- Popup ---------- -->
+  <div class="popup-overlay" id="popup">
+    <span class="arrow left" id="prev">&#10094;</span>
+    <img src="" alt="Popup Image">
+    <span class="arrow right" id="next">&#10095;</span>
+  </div>
+
+  <!-- ---------- Footer ---------- -->
+<footer>
+  © 2024 Sree Varahi Interiors. All Rights Reserved. |Developed by N.SAI VINAY REDDY
+  <a href="https://www.linkedin.com/in/sai-vinay-reddy-nookala-584128252/?originalSubdomain=in" target="_blank" class="linkedin-link">
+    <svg xmlns="http://www.w3.org/2000/svg" class="linkedin-icon" viewBox="0 0 24 24" fill="#4b0000">
+      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 
+               2.239 5 5 5h14c2.762 0 5-2.239 
+               5-5v-14c0-2.761-2.238-5-5-5zm-11 
+               19h-3v-9h3v9zm-1.5-10.271c-.966 
+               0-1.75-.785-1.75-1.75s.784-1.75 
+               1.75-1.75 1.75.785 
+               1.75 1.75-.784 1.75-1.75 
+               1.75zm13.5 10.271h-3v-4.604c0-1.098-.021-2.509-1.528-2.509-1.528 
+               0-1.763 1.195-1.763 2.428v4.685h-3v-9h2.879v1.233h.041c.401-.761 
+               1.379-1.562 2.84-1.562 3.037 0 3.6 
+               2.001 3.6 4.604v4.725z"/>
+    </svg>
+  </a>
+</footer>
+
+
+  <!-- ---------- Script ---------- -->
+  <script>
+    const gallery = document.querySelector('.gallery');
+    const popup = document.getElementById('popup');
+    const popupImg = popup.querySelector('img');
+    const galleryImgs = document.querySelectorAll('.gallery img');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+    let currentIndex = 0;
+
+    // Auto scroll pause on hover
+    gallery.addEventListener('mouseenter', () => gallery.style.animationPlayState = 'paused');
+    gallery.addEventListener('mouseleave', () => gallery.style.animationPlayState = 'running');
+
+    function showImage(index) {
+      popupImg.classList.add('fade-out');
+      setTimeout(() => {
+        popupImg.src = galleryImgs[index].src;
+        popupImg.classList.remove('fade-out');
+      }, 500);
+    }
+
+    galleryImgs.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        popup.classList.add('active');
+        popupImg.src = img.src;
+        currentIndex = index;
+      });
+    });
+
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) popup.classList.remove('active');
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % galleryImgs.length;
+      showImage(currentIndex);
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + galleryImgs.length) % galleryImgs.length;
+      showImage(currentIndex);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (popup.classList.contains('active')) {
+        if (e.key === 'Escape') popup.classList.remove('active');
+        if (e.key === 'ArrowRight') nextBtn.click();
+        if (e.key === 'ArrowLeft') prevBtn.click();
+      }
+    });
+  </script>
+</body>
+</html>

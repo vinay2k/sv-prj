@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sree Varahi Dream & Build - Premium Interior Design</title>
+  <link rel="icon" type="image/x-icon" href="icon.ico">
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="style.css">
+  <title>How It Works</title>
+  
+</head>
+<body>
+  
+        <nav>
+            <img src="imgs/colourlogo.png" class="logo" alt="Sree Varahi Dream & Build Logo">
+            <ul>
+               <li class="card1"><a href=index.html>Home</a></li>
+                <li class="card1"><a href=about.html>About</a></li>
+                <li class="card1"><a href=portfolio.html>Portfolio</a></li>
+                <li class="card1"><a href=services.html>How It Works</a></li>
+                <li class="card1"><a href=contact.html>Contact</a></li>
+            </ul>
+        </nav>
+  
+
+  <h2>How It Works</h2>
+
+  <!-- Timeline Steps -->
+  <div class="steps">
+    <div class="step">
+      <div class="icon"><img src="https://img.icons8.com/ios-filled/50/businessman.png" alt="Meet designer"></div>
+      <strong>Meet a designer</strong>
+      <p>Discuss your space, needs and vision in an initial consultation.</p>
+    </div>
+
+    <div class="step">
+      <div class="icon"><img src="https://img.icons8.com/ios-filled/50/sofa.png" alt="Book project"></div>
+      <strong>(5% payment)</strong>
+      <p>Book the project with a small advance to reserve your slot.</p>
+    </div>
+
+    <div class="step">
+      <div class="icon"><img src="https://img.icons8.com/ios-filled/50/paper-plane.png" alt="Execution"></div>
+      <strong>(60% payment)</strong>
+      <p>Execution begins — construction, procurement and regular updates.</p>
+    </div>
+
+    <div class="step">
+      <div class="icon"><img src="https://img.icons8.com/ios-filled/50/maintenance.png" alt="Installations"></div>
+      <strong>(100% payment)</strong>
+      <p>Final installations, finishing touches and quality checks.</p>
+    </div>
+
+    <div class="step">
+      <div class="icon"><img src="https://img.icons8.com/ios-filled/50/delivery.png" alt="Move in"></div>
+      <strong>Move in and enjoy!</strong>
+      <p>Handover, final walkthrough and help with settling in.</p>
+    </div>
+  </div>
+
+  <!-- First Section -->
+  <div class="section">
+    <div class="text">
+      <h3>Launch Your Project</h3>
+      <p>We’ll conduct an effective study of your unique space, review your photos and inspiration,
+         your measurements, needs, and your dreams.</p>
+    </div>
+    <img src="https://img.icons8.com/ios-filled/100/rocket.png" alt="Launch Project">
+  </div>
+
+  <!-- Second Section -->
+  <div class="section">
+    <div class="text">
+      <h3>Think Tank Your Ideas</h3>
+      <p>Our interior designers will reveal your vision back to you to see how you feel and
+         breakthrough to a consensus on how together we can transform your space to feel more welcome than ever before.</p>
+    </div>
+    <img src="https://img.icons8.com/ios-filled/100/conference-call.png" alt="Think Tank">
+  </div>
+
+  <!-- Third Section -->
+  <div class="section">
+    <div class="text">
+      <h3>Shop and Deliver</h3>
+      <p>We’ll help you rediscover your space and imagine something powerful and amazing with
+         concept boards, color palette, floor plan recommendation, and even 3D rendering and 360° Virtual Reality Simulation.</p>
+    </div>
+    <img src="https://img.icons8.com/ios-filled/100/online-support.png" alt="Shop and Deliver">
+  </div>
+
+  <a href="#" class="btn">BOOK A CONSULTATION</a>
+
+  <script>
+    // Slide-up animation when sections enter viewport
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  <footer>
+  © 2024 Sree Varahi Interiors. All Rights Reserved. |Developed by N.SAI VINAY REDDY
+  <a href="https://www.linkedin.com/in/sai-vinay-reddy-nookala-584128252/?originalSubdomain=in" target="_blank" class="linkedin-link">
+    <svg xmlns="http://www.w3.org/2000/svg" class="linkedin-icon" viewBox="0 0 24 24" fill="#4b0000">
+      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 
+               2.239 5 5 5h14c2.762 0 5-2.239 
+               5-5v-14c0-2.761-2.238-5-5-5zm-11 
+               19h-3v-9h3v9zm-1.5-10.271c-.966 
+               0-1.75-.785-1.75-1.75s.784-1.75 
+               1.75-1.75 1.75.785 
+               1.75 1.75-.784 1.75-1.75 
+               1.75zm13.5 10.271h-3v-4.604c0-1.098-.021-2.509-1.528-2.509-1.528 
+               0-1.763 1.195-1.763 2.428v4.685h-3v-9h2.879v1.233h.041c.401-.761 
+               1.379-1.562 2.84-1.562 3.037 0 3.6 
+               2.001 3.6 4.604v4.725z"/>
+    </svg>
+  </a>
+</footer>
+</body>
+</html>

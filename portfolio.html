@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sree Varahi Dream & Build - Premium Interior Design</title>
+  <link rel="icon" type="image/x-icon" href="icon.ico">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+  <!-- Header -->
+  <nav>
+    <img src="imgs/colourlogo.png" class="logo" alt="Sree Varahi Dream & Build Logo">
+    <ul>
+      <li class="card1"><a href="index.html">Home</a></li>
+      <li class="card1"><a href="about.html">About</a></li>
+      <li class="card1"><a href="portfolio.html">Portfolio</a></li>
+      <li class="card1"><a href="services.html">How It Works</a></li>
+      <li class="card1"><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Title -->
+ <section class="portfolio-section">
+    <img src="imgs/kitchen1.jpg" alt="Kitchen Designs" onclick="window.location.href='kitchen.html'" />
+    <div class="portfolio-text">
+      <h2>Kitchen Designs</h2>
+      <p>Explore our modern modular kitchens that blend aesthetics and functionality, designed to make every meal a pleasure.</p>
+      <a href="kitchen.html">View Projects</a>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <img src="imgs/bedroom1.jpg" alt="Bedroom Designs" onclick="window.location.href='bedroom.html'" />
+    <div class="portfolio-text">
+      <h2>Bedroom Designs</h2>
+      <p>Experience cozy, luxurious bedrooms designed to balance comfort, privacy, and elegance.</p>
+      <a href="bedroom.html">View Projects</a>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <img src="imgs/hall1.jpg" alt="Living Room Designs" onclick="window.location.href='hall.html'" />
+    <div class="portfolio-text">
+      <h2>Living Room Designs</h2>
+      <p>Step into our inviting living spaces that bring style, sophistication, and togetherness to every home.</p>
+      <a href="hall.html">View Projects</a>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <img src="imgs/artworks1.jpg" alt="Art Works" onclick="window.location.href='artworks.html'" />
+    <div class="portfolio-text">
+      <h2>Art Works</h2>
+      <p>Unique and handcrafted art pieces that add personality, culture, and a creative touch to your interiors.</p>
+      <a href="artworks.html">View Projects</a>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <img src="imgs/flooring.jpg" alt="Flooring" onclick="window.location.href='flooring.html'" />
+    <div class="portfolio-text">
+      <h2>Flooring</h2>
+      <p>Premium flooring solutions with a variety of textures and finishes to suit every taste and theme.</p>
+      <a href="flooring.html">View Projects</a>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <img src="imgs/aluminum.jpg" alt="Aluminum Works" onclick="window.location.href='aluminum.html'" />
+    <div class="portfolio-text">
+      <h2>Aluminum Works</h2>
+      <p>Durable and stylish aluminum structures for windows, doors, partitions, and facades crafted to perfection.</p>
+      <a href="aluminum.html">View Projects</a>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <img src="imgs/elevations.jpg" alt="Elevations" onclick="window.location.href='elevations.html'" />
+    <div class="portfolio-text">
+      <h2>Elevations</h2>
+      <p>Modern exterior elevation designs that enhance your home’s visual appeal and architectural elegance.</p>
+      <a href="elevations.html">View Projects</a>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <img src="imgs/painting.jpg" alt="Painting" onclick="window.location.href='painting.html'" />
+    <div class="portfolio-text">
+      <h2>Painting</h2>
+      <p>Vibrant wall color palettes and expert finishes that give your spaces a refreshing and stylish look.</p>
+      <a href="painting.html">View Projects</a>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <img src="imgs/steelart.jpg" alt="Structural Steel Art Works" onclick="window.location.href='steelart.html'" />
+    <div class="portfolio-text">
+      <h2>Structural Steel Art Works</h2>
+      <p>Custom structural steel designs combining strength and artistry to redefine modern interiors.</p>
+      <a href="steelframe.html">View Projects</a>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <img src="imgs/falseceiling.jpg" alt="False Ceiling Works" onclick="window.location.href='falseceiling.html'" />
+    <div class="portfolio-text">
+      <h2>False Ceiling Works</h2>
+      <p>Creative false ceiling designs with lighting concepts that add dimension and elegance to your spaces.</p>
+      <a href="false-ceiling.html">View Projects</a>
+    </div>
+  </section>
+
+
+  <!-- ---------- Animation Script ---------- -->
+  <script>
+    const sections = document.querySelectorAll('.portfolio-section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+  
+<footer>
+  © 2024 Sree Varahi Interiors. All Rights Reserved. |Developed by N.SAI VINAY REDDY
+  <a href="https://www.linkedin.com/in/sai-vinay-reddy-nookala-584128252/?originalSubdomain=in" target="_blank" class="linkedin-link">
+    <svg xmlns="http://www.w3.org/2000/svg" class="linkedin-icon" viewBox="0 0 24 24" fill="#4b0000">
+      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 
+               2.239 5 5 5h14c2.762 0 5-2.239 
+               5-5v-14c0-2.761-2.238-5-5-5zm-11 
+               19h-3v-9h3v9zm-1.5-10.271c-.966 
+               0-1.75-.785-1.75-1.75s.784-1.75 
+               1.75-1.75 1.75.785 
+               1.75 1.75-.784 1.75-1.75 
+               1.75zm13.5 10.271h-3v-4.604c0-1.098-.021-2.509-1.528-2.509-1.528 
+               0-1.763 1.195-1.763 2.428v4.685h-3v-9h2.879v1.233h.041c.401-.761 
+               1.379-1.562 2.84-1.562 3.037 0 3.6 
+               2.001 3.6 4.604v4.725z"/>
+    </svg>
+  </a>
+</footer>
+</body>
+</html>
